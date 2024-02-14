@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+
+
+
+// Decimal to binary : use parity bit ( /2 )
+// steps :
+/*   1)  / 2
+     2)   store parity/ reminder 
+    3)    repeat step till n!=0 
+     4)   reverser parity sequence
+     */
+
+int main(){
+
+    int n;
+    cout<< "Enter decimal number, you want ot convert into binary :";
+    cin>>n;
+
+    int ans=0;
+    int power=1;
+
+    while(n>0){
+        int parityDigit= n % 2;
+        ans = ans +  parityDigit*power;
+        power = power*10;
+        n = n /2;
+
+    } cout << ans <<endl;
+
+
+
+    return 0;
+}
